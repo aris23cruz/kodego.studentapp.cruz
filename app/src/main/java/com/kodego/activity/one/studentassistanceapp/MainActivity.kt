@@ -22,14 +22,25 @@ class MainActivity : AppCompatActivity() {
     }
 
    private fun checkCredential(userName: String, password: String): Boolean{
-        val correctUserName : String = "admin"
+        val correctUserName : String = "Admin"
         val correctPassword : String = "admin123"
+
+       val correctUserName2 : String = "John"
+       val correctPassword2 : String = "pass123"
 
         if((correctUserName == userName)&&(correctPassword == password)){
             val intent = Intent(this,HomeActivity::class.java)
+            intent.putExtra("nameID",userName)
             startActivity(intent)
             finish()
             Toast.makeText(applicationContext,"Logged in", Toast.LENGTH_SHORT).show()
+            return true
+        }else if((correctUserName2 == userName)&&(correctPassword2 == password)) {
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.putExtra("nameID", userName)
+            startActivity(intent)
+            finish()
+            Toast.makeText(applicationContext, "Logged in", Toast.LENGTH_SHORT).show()
             return true
         }else{
             Toast.makeText(applicationContext,"Input correct username/password", Toast.LENGTH_SHORT).show()
