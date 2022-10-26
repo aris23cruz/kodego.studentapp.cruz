@@ -14,15 +14,15 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         var studentList = mutableListOf<Students>(
-            Students(R.drawable.ic_baseline_offline_pin_24, "English","MWF 1:00PM-2:00PM"),
-            Students(R.drawable.ic_baseline_ondemand_video_24,"Audio Visual","TTH 2:00PM-4:00PM"),
-            Students(R.drawable.ic_baseline_paid_24, "Logic123", "MWF 3:00PM-4:00PM"),
-            Students(R.drawable.ic_baseline_offline_pin_24, "English","MWF 1:00PM-2:00PM"),
-            Students(R.drawable.ic_baseline_ondemand_video_24,"Audio Visual","TTH 2:00PM-4:00PM"),
-            Students(R.drawable.ic_baseline_paid_24, "Logic123", "MWF 3:00PM-4:00PM"),
-            Students(R.drawable.ic_baseline_offline_pin_24, "English","MWF 1:00PM-2:00PM"),
-            Students(R.drawable.ic_baseline_ondemand_video_24,"Audio Visual","TTH 2:00PM-4:00PM"),
-            Students(R.drawable.ic_baseline_paid_24, "Logic123", "MWF 3:00PM-4:00PM"),
+            Students(R.drawable.english, "English","MWF 1:00PM-2:00PM"),
+            Students(R.drawable.biology,"General Biology","TTH 2:00PM-4:00PM"),
+            Students(R.drawable.calculus, "Pre-Calculus", "MWF 3:00PM-4:00PM"),
+            Students(R.drawable.chemistry, "General Chemistry","MWF 1:00PM-2:00PM"),
+            Students(R.drawable.commandresearch,"Communication & Research","TTH 2:00PM-4:00PM"),
+            Students(R.drawable.math, "General Math", "MWF 3:00PM-4:00PM"),
+            Students(R.drawable.personaldev, "Personal Development","MWF 1:00PM-2:00PM"),
+            Students(R.drawable.physicaleducation,"Physical Education","TTH 2:00PM-4:00PM"),
+            Students(R.drawable.physics, "General Physics", "MWF 3:00PM-4:00PM"),
         )
         val adapter = StudentAdapter(studentList)
 
