@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="80dp">
+    android:layout_height="100dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -27,10 +27,12 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
+                android:layout_marginStart="8dp"
                 android:background="#00FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.38"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
@@ -39,6 +41,7 @@
                 android:layout_height="0dp"
                 android:hint="Schedule"
                 android:paddingStart="10dp"
+                android:textColor="@color/purple_200"
                 android:textColorHint="@color/purple_200"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -52,16 +55,16 @@
                 android:layout_height="wrap_content"
                 android:hint="Subject"
                 android:paddingStart="10dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/purple_200"
+                android:textColor="@color/purple1"
+                android:textColorHint="@color/purple1"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imgSubjectIcon"
-                app:layout_constraintTop_toTopOf="@+id/imgSubjectIcon"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.102" />
 
             <TextView
                 android:id="@+id/tvTeachersName"
@@ -73,7 +76,32 @@
                 android:textColor="@color/purple1"
                 android:textColorHint="@color/purple_200"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgSubjectIcon" />
+                app:layout_constraintStart_toEndOf="@+id/imgSubjectIcon"
+                app:layout_constraintTop_toTopOf="@+id/txtSchedule"
+                app:layout_constraintVertical_bias="0.45" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/purple1"
+                app:layout_constraintStart_toEndOf="@+id/tvTeachersName"
+                app:layout_constraintTop_toTopOf="@+id/txtSchedule"
+                app:srcCompat="@android:drawable/ic_menu_edit"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/imgDelete"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/purple1"
+                app:layout_constraintStart_toEndOf="@+id/imageButton4"
+                app:layout_constraintTop_toTopOf="@+id/imageButton4"
+                app:srcCompat="@android:drawable/ic_menu_delete"
+                tools:ignore="SpeakableTextPresentCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

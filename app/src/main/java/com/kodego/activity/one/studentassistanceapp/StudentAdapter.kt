@@ -7,6 +7,7 @@ import com.kodego.activity.one.studentassistanceapp.databinding.RowSubjectBindin
 
 class StudentAdapter(val students:List<Students>):RecyclerView.Adapter<StudentAdapter.StudentViewHolder>() {
 
+    var onCardClick: ((Students)-> Unit)? = null
     inner class StudentViewHolder(val binding: RowSubjectBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudentViewHolder {
@@ -20,6 +21,9 @@ class StudentAdapter(val students:List<Students>):RecyclerView.Adapter<StudentAd
             imgSubjectIcon.setImageResource(students[position].imageSubject)
             txtSubjectName.text = students[position].nameSubject
             txtSchedule.text = students[position].schedule
+        }
+        holder.itemView.setOnClickListener(){
+            onCardClick?.invoke(students[position])
         }
 
     }
