@@ -38,14 +38,49 @@
         android:id="@+id/txtSchedule2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Schedule"
+        android:textColor="@color/purple1"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgSubjectIcon2" />
+
+    <TextView
+        android:id="@+id/txtTeacherName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teachers Name"
         android:textColor="@color/purple1"
         android:textSize="20sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgSubjectIcon2"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintTop_toBottomOf="@+id/tagSchedule"
+        app:layout_constraintVertical_bias="0.818" />
+
+    <TextView
+        android:id="@+id/tagTeachersName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="Teacher's Name:"
+        android:textColor="@color/purple1"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTeacherName"
+        app:layout_constraintEnd_toStartOf="@+id/txtTeacherName" />
+
+    <TextView
+        android:id="@+id/tagSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Schedule:"
+        android:textColor="@color/purple1"
+        app:layout_constraintEnd_toEndOf="@+id/txtSchedule2"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="@+id/txtSchedule2"
+        app:layout_constraintTop_toBottomOf="@+id/txtSchedule2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

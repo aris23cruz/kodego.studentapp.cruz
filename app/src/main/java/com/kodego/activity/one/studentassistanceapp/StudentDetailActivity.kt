@@ -14,9 +14,11 @@ class StudentDetailActivity : AppCompatActivity() {
         var nameSubject: String? = intent.getStringExtra("subjectName")
         var schedule: String? = intent.getStringExtra("schedule")
         var imageSubject: Int = intent.getIntExtra("subjectImage",0)
+        var teacherName: String? = intent.getStringExtra("teacherName")
 
         binding.imgSubjectIcon2.setImageResource(imageSubject)
         binding.txtSubjectName2.text = nameSubject
         binding.txtSchedule2.text = schedule
+        binding.txtTeacherName.text = teacherName
     }
 }

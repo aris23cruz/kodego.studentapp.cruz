@@ -67,24 +67,22 @@
                 app:layout_constraintVertical_bias="0.102" />
 
             <TextView
-                android:id="@+id/tvTeachersName"
+                android:id="@+id/txtTeachersName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
                 android:hint="Teachers Name"
                 android:paddingStart="10dp"
-                android:textColor="@color/purple1"
+                android:textColor="@color/purple_200"
                 android:textColorHint="@color/purple_200"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgSubjectIcon"
-                app:layout_constraintTop_toTopOf="@+id/txtSchedule"
-                app:layout_constraintVertical_bias="0.45" />
+                app:layout_constraintStart_toEndOf="@+id/imgSubjectIcon" />
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/imgButtonUpdate"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="52dp"
+                android:layout_marginStart="56dp"
                 android:layout_marginTop="8dp"
                 android:backgroundTint="@color/purple1"
                 app:layout_constraintStart_toEndOf="@+id/tvTeachersName"
@@ -93,15 +91,30 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imgDelete"
+                android:id="@+id/imgButtonDelete"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
                 android:backgroundTint="@color/purple1"
-                app:layout_constraintStart_toEndOf="@+id/imageButton4"
-                app:layout_constraintTop_toTopOf="@+id/imageButton4"
+                app:layout_constraintStart_toEndOf="@+id/imgButtonUpdate"
+                app:layout_constraintTop_toTopOf="@+id/imgButtonUpdate"
                 app:srcCompat="@android:drawable/ic_menu_delete"
                 tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tvTeachersName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:paddingStart="10dp"
+                android:text="Teachers Name:"
+                android:textColor="@color/purple1"
+                app:layout_constraintBottom_toTopOf="@+id/txtTeachersName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imgSubjectIcon"
+                app:layout_constraintTop_toTopOf="@+id/txtSchedule"
+                app:layout_constraintVertical_bias="1.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
